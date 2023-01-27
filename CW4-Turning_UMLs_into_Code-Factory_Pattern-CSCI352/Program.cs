@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Name: Zachary Rose
+// Date: 1/27/2023
+// Class: CSCI352
+// Simple console program based off of the concrete shape factory UML
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +12,7 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
 {
     internal class Program
     {
+        // Possible shape types. Triangle not implemented by design.
         enum ShapeType
         {
             LINE,
@@ -15,10 +20,12 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
             RECTANGLE,
             TRIANGLE           
         }
+        // Geometric shapes must be drawable
         interface IGeometricShape
         {
             void draw();
         }
+        // A line shape
         class Line : IGeometricShape
         {
             public void draw()
@@ -26,6 +33,7 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
                 Console.WriteLine("Line is drawn.");
             }
         }
+        // A circle shape
         class Circle : IGeometricShape
         {
             public void draw()
@@ -33,6 +41,7 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
                 Console.WriteLine("Circle is drawn.");
             }
         }
+        // A rectangle shape
         class Rectangle : IGeometricShape
         {
             public void draw()
@@ -40,6 +49,7 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
                 Console.WriteLine("Rectangle is drawn.");
             }
         }
+        // ShapeFactory class, can return the specified IGeometricShape based on the requested ShapeType
         class ShapeFactory
         {
             public IGeometricShape getShape(ShapeType type)
@@ -52,13 +62,15 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
                         return new Circle();
                     case ShapeType.RECTANGLE:
                         return new Rectangle();
-                    // not implemented
+                    // non implemented shape
                     default:
                         return null;
                 }
             }
 
         }
+        // Uses ShapeFactory to make a shape of every available ShapeType and calls their draw method, if they are implemented.
+        // Not currently using a loop, and no helper function due to UML specifications. 
         static void Main(string[] args)
         {
             ShapeFactory factory = new ShapeFactory();
