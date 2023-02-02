@@ -32,4 +32,4 @@ geometric shapes that can be "drawn."
 * Main attempts to draw each of the shape types, including the purposefully non-implemented triangle.
 ## Design Decisions
 * Due to the simplicity of the classes, I kept everything in one file.
-* Main is repetative and overcrowded because I wanted to strictly adhere to the UML specifications.
+* Used a foreach to iterate over every element in the ShapeType enum to adhere to DRY and ETC principles. 
