@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW4-Turning_UMLs_into_Code-Factory_Pattern-CSCI352", "CW4-Turning_UMLs_into_Code-Factory_Pattern-CSCI352\CW4-Turning_UMLs_into_Code-Factory_Pattern-CSCI352.csproj", "{739E93E7-F23B-4EAE-8407-868F7649BB8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW4-Turning_UMLs_into_Code-Abstract_Pattern-CSCI352", "CW4-Turning_UMLs_into_Code-Abstract_Pattern-CSCI352\CW4-Turning_UMLs_into_Code-Abstract_Pattern-CSCI352.csproj", "{D033FF9E-E15A-4D88-AF53-81C04EEEAF3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{739E93E7-F23B-4EAE-8407-868F7649BB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739E93E7-F23B-4EAE-8407-868F7649BB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{739E93E7-F23B-4EAE-8407-868F7649BB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D033FF9E-E15A-4D88-AF53-81C04EEEAF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D033FF9E-E15A-4D88-AF53-81C04EEEAF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D033FF9E-E15A-4D88-AF53-81C04EEEAF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D033FF9E-E15A-4D88-AF53-81C04EEEAF3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
