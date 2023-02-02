@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -70,41 +72,21 @@ namespace CW4_Turning_UMLs_into_Code_Factory_Pattern_CSCI352
 
         }
         // Uses ShapeFactory to make a shape of every available ShapeType and calls their draw method, if they are implemented.
-        // Not currently using a loop, and no helper function due to UML specifications. 
         static void Main(string[] args)
         {
             ShapeFactory factory = new ShapeFactory();
 
             IGeometricShape shape;
 
-            shape = factory.getShape(ShapeType.LINE);
-            if (shape != null)
-            {
-                shape.draw();
+            foreach (ShapeType n in Enum.GetValues(typeof(ShapeType))){
+                shape = factory.getShape(n);
+                if (shape != null)
+                {
+                    shape.draw();
+                }
+                else Console.WriteLine("Invalid shape");
             }
-            else Console.WriteLine("Invalid shape");
-
-            shape = factory.getShape(ShapeType.CIRCLE);
-            if (shape != null)
-            {
-                shape.draw();
-            }
-            else Console.WriteLine("Invalid shape");
-
-            shape = factory.getShape(ShapeType.RECTANGLE);
-            if (shape != null)
-            {
-                shape.draw();
-            }
-            else Console.WriteLine("Invalid shape");
-
-            shape = factory.getShape(ShapeType.TRIANGLE);
-            if (shape != null)
-            {
-                shape.draw();
-            }
-            else Console.WriteLine("Invalid shape");
-
+            
             Console.ReadKey();
         }
     }
